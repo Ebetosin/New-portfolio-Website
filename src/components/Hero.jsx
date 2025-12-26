@@ -39,7 +39,7 @@ const Hero = () => {
               View Work
             </a>
             <a href="#contact" className="btn ghost">
-              Download CV
+              Connect with Me
             </a>
           </div>
         </div>

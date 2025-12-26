@@ -254,6 +254,7 @@ section {
 /* =====================================================
    CARDS, SKILLS, PROJECTS
 ===================================================== */
+
 .card,
 .skill-card,
 .project {
@@ -276,6 +277,14 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
+}
+
+.skill-group h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);        /* Keep theme accent */
+  margin-bottom: 1.25rem;
+  text-align: center;
 }
 
 .skill-list {
@@ -308,6 +317,9 @@ section {
   color: var(--text-muted);
 }
 
+/* =====================================================
+   CARDS GRID
+===================================================== */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
@@ -315,7 +327,9 @@ section {
   margin-top: 2rem;
 }
 
-/* Projects */
+/* =====================================================
+   PROJECTS
+===================================================== */
 #projects .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
@@ -367,7 +381,11 @@ section {
   transition: background 0.3s ease;
 }
 
-#about h2 {
+#about h2,
+#skills h2,
+#projects h2,
+#frontend h2,
+#backend h2 {
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
@@ -375,7 +393,11 @@ section {
   margin-bottom: 1.5rem;
 }
 
-#about .muted {
+#about .muted,
+#skills .muted,
+#projects .muted,
+#frontend .muted,
+#backend .muted {
   text-align: center;
   font-size: 1.1rem;
   color: var(--text-muted);
@@ -384,20 +406,32 @@ section {
   line-height: 1.6;
 }
 
-#about .cards {
+#about .cards,
+#skills .cards,
+#projects .cards,
+#frontend .cards,
+#backend .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
-#about .card h3 {
+#about .card h3,
+#skills .card h3,
+#projects .card h3,
+#frontend .card h3,
+#backend .card h3 {
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--accent);
   margin-bottom: 0.75rem;
 }
 
-#about .card p {
+#about .card p,
+#skills .card p,
+#projects .card p,
+#frontend .card p,
+#backend .card p {
   font-size: 0.95rem;
   color: var(--text-muted);
   line-height: 1.5;

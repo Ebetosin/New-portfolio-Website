@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ResumeButton from './ResumeButton'
 import ThemeToggle from './ThemeToggle'
 
-const sections = ['hero', 'about', 'contact','skills', 'contact']
+const sections = ['hero', 'about', 'skills', 'projects', 'contact']
 
 const Navbar = () => {
   const [active, setActive] = useState('hero')
