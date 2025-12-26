@@ -6,7 +6,7 @@ import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
-import DebugOverflows from './components/DebugOverflows'
+// import DebugOverflows from './components/DebugOverflows'
 
 function App() {
   return (
@@ -25,8 +25,8 @@ function App() {
         © {new Date().getFullYear()} . All Right Reserved by E_benn
       </footer>
       {/* dev-only overflow debugger: append ?debug=overflow to URL to enable */}
-      {typeof window !== 'undefined' && window.location.search.includes('debug=overflow') ? <DebugOverflows /> : null}
-    </div>
+      {/* {typeof window !== 'undefined' && window.location.search.includes('debug=overflow') ? <DebugOverflows /> : null} */}
+    </div> 
   )
 }
 
