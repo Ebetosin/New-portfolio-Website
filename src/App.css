@@ -90,6 +90,14 @@ section {
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #64748b;
+  background: linear-gradient(180deg, rgba(239,246,255,0.4), rgba(255,249,242,0.2));
+}
+
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
