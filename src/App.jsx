@@ -6,12 +6,24 @@ import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+// import Snowfall from 'react-snowfall'
 
 // import DebugOverflows from './components/DebugOverflows'
 
 function App() {
   return (
     <div className="app-root">
+      {/* <Snowfall
+  color="white"
+  style={{
+    position: 'fixed',
+    width: '100vw',
+    height: '100vh',
+    zIndex: 9999,
+    pointerEvents: 'none'
+  }}
+/> */}
+
       <Navbar />
 
       <main>

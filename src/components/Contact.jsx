@@ -5,9 +5,9 @@ import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa'
 const Contact = () => {
   const contacts = [
     { icon: <MdEmail />, href: 'mailto:ebetosin@gmail.com', label: 'Email' },
-    { icon: <FaGithub />, href: 'https://github.com/your-username', label: 'GitHub' },
-    { icon: <FaTwitter />, href: 'https://twitter.com/your-username', label: 'Twitter' },
-    { icon: <FaLinkedin />, href: 'https://www.linkedin.com/in/your-username', label: 'LinkedIn' },
+    { icon: <FaGithub />, href: 'https://github.com/Ebetosin', label: 'GitHub' },
+    { icon: <FaTwitter />, href: 'https://x.com/ebetosin?s=21', label: 'Twitter' },
+    { icon: <FaLinkedin />, href: 'http://www.linkedin.com/in/ebenezer-ojo-ba11ab222', label: 'LinkedIn' },
   ]
 
   return (
