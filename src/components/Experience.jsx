@@ -16,6 +16,12 @@ const EXPERIENCE = [
     company: 'Tech Innovations',
     period: '2021 - 2022',
     desc: 'Designed and developed responsive user interfaces using React, optimized performance, and enhanced accessibility for web applications.'
+  },
+  {
+    role: 'Frontend Developer',
+    company: 'Tech Innovations',
+    period: '2021 - 2022',
+    desc: 'Designed and developed responsive user interfaces using React, optimized performance, and enhanced accessibility for web applications.'
   }
 ]
 

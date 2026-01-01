@@ -16,6 +16,24 @@ const PROJECTS = [
     desc: 'Secure biometric verification system integrating fingerprint capture, external identity validation, and verification reporting.',
     stack: 'Java • Spring Boot • Biometrics • React',
     link: '#'
+  },
+  {
+    name: 'Referral Management System',
+    desc: 'Enterprise referral workflow with multi-level approvals, audit trails, role-based access, and real-time status tracking.',
+    stack: 'Java • Spring Boot • React • PostgreSQL',
+    link: '#'
+  },
+  {
+    name: 'Fixed Asset Management System',
+    desc: 'End-to-end asset lifecycle management covering acquisition, depreciation, reassignment, disposal, and audit logging.',
+    stack: 'Spring Boot • React • Docker • PostgreSQL',
+    link: '#'
+  },
+  {
+    name: 'BVN / NIN Verification Platform',
+    desc: 'Secure biometric verification system integrating fingerprint capture, external identity validation, and verification reporting.',
+    stack: 'Java • Spring Boot • Biometrics • React',
+    link: '#'
   }
 ]
 
