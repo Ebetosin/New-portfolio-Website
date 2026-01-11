@@ -1,32 +1,36 @@
-import React, { useEffect, useState } from 'react'
-import ResumeButton from './ResumeButton'
-import ThemeToggle from './ThemeToggle'
+import React, { useEffect, useState } from 'react';
+import ResumeButton from './ResumeButton';
+import ThemeToggle from './ThemeToggle';
 
-const sections = ['home', 'about', 'skills', 'experience', 'projects', 'contact']
+const sections = ['home', 'about', 'skills', 'experience', 'projects', 'contact'];
 
 const Navbar = () => {
-  const [active, setActive] = useState('home')
+  const [active, setActive] = useState('home');
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
-      const scrollPos = window.scrollY + 120
-
+      setScrolled(window.scrollY > 40);
+      const scrollPos = window.scrollY + 120;
       for (const id of sections) {
-        const el = document.getElementById(id)
+        const el = document.getElementById(id);
         if (el && el.offsetTop <= scrollPos && el.offsetTop + el.offsetHeight > scrollPos) {
-          setActive(id)
-          break
+          setActive(id);
+          break;
         }
       }
-    }
+    };
 
-    window.addEventListener('scroll', onScroll)
-    onScroll()
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <header className="site-header">
+    <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <h1 className="brand">
           <a href="/" className="brand-link">
@@ -35,12 +39,30 @@ const Navbar = () => {
         </h1>
 
         <div className="nav-center">
-          <nav className="nav-links">
+          {/* Desktop links */}
+          <nav className="nav-links desktop">
+            {sections.map((id) => (
+              <a key={id} href={`#${id}`} className={active === id ? 'active' : ''}>
+                {id.charAt(0).toUpperCase() + id.slice(1)}
+              </a>
+            ))}
+          </nav>
+
+          {/* Hamburger */}
+          <div className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          {/* Mobile links */}
+          <nav className={`nav-links mobile ${menuOpen ? 'active' : ''}`}>
             {sections.map((id) => (
               <a
                 key={id}
                 href={`#${id}`}
                 className={active === id ? 'active' : ''}
+                onClick={() => setMenuOpen(false)}
               >
                 {id.charAt(0).toUpperCase() + id.slice(1)}
               </a>
@@ -54,7 +76,7 @@ const Navbar = () => {
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
