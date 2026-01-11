@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import picture from '../assets/eben.JPG'
 import Snowfall from 'react-snowfall'
 
-const Hero = () => {
+const Home = () => {
   const [bounce, setBounce] = useState(false)
   const [snowColor, setSnowColor] = useState('#ffffff')
 
@@ -17,7 +17,7 @@ const Hero = () => {
   }
 
   return (
-    <section id="hero" className="hero">
+    <section id="home" className="home">
       <Snowfall
         color={snowColor}
         snowflakeCount={120}
@@ -29,14 +29,14 @@ const Hero = () => {
         }}
       />
 
-      <div className="container hero-grid">
+      <div className="container home-grid">
         <img src={picture} alt="Ebenezer Ojo avatar" className="avatar" />
 
         <div>
-          <h1 className="hero-greeting">
+          <h1 className="home-greeting">
             Hi, I'm{' '}
             <span
-              className={`brand-accent hero-name ${bounce ? 'bounce' : ''}`}
+              className={`brand-accent home-name ${bounce ? 'bounce' : ''}`}
               onClick={handleClick}
             >
               Ebenezer Ojo
@@ -59,4 +59,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default Home

@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import ResumeButton from './ResumeButton'
 import ThemeToggle from './ThemeToggle'
 
-const sections = ['hero', 'about', 'skills', 'experience', 'projects', 'contact']
+const sections = ['home', 'about', 'skills', 'experience', 'projects', 'contact']
 
 const Navbar = () => {
-  const [active, setActive] = useState('hero')
+  const [active, setActive] = useState('home')
 
   useEffect(() => {
     const onScroll = () => {

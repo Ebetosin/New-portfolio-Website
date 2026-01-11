@@ -177,20 +177,20 @@ section {
 }
 
 /* =====================================================
-   HERO
+   HOME
 ===================================================== */
 
-.hero {
+.home {
   position: relative;
   overflow: hidden;
 }
 
-.hero .container {
+.home .container {
   position: relative;
   z-index: 2;
 }
 
-.hero-name {
+.home-name {
   cursor: pointer;
   display: inline-block;
 }
@@ -207,7 +207,7 @@ section {
   100% { transform: translateY(0); }
 }
 
-.hero-grid {
+.home-grid {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 2rem;
@@ -644,7 +644,7 @@ footer {
     flex-direction: column;
     gap: 0.5rem;
   }
-  .hero-grid {
+  .home-grid {
     grid-template-columns: 1fr;
     text-align: center;
   }
