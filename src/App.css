@@ -756,3 +756,45 @@ footer {
   color: var(--text-muted);
   transition: background 0.3s ease, color 0.3s ease;
 }
+
+
+@media (max-width: 720px) {
+  .home-grid {
+    grid-template-columns: 1fr;  /* single column */
+    text-align: center;           /* center content */
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;              /* center horizontally */
+    display: block;              /* ensure it's a block element */
+  }
+
+  .actions {
+    justify-content: center;
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-size: 0.8rem;
+  background: rgba(100, 116, 139, 0.1);
+  color: #475569;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}

@@ -1,39 +1,39 @@
 const PROJECTS = [
   {
-    name: 'Referral Management System',
-    desc: 'Enterprise referral workflow with multi-level approvals, audit trails, role-based access, and real-time status tracking.',
-    stack: 'Java • Spring Boot • React • PostgreSQL',
-    link: '#'
+    name: 'Middleware API for Financial Integrations',
+    desc: 'A middleware API for financial integrations, providing secure and scalable communication between banking systems and external services.',
+    tags: ['Java', 'Spring Boot', 'REST', 'Swagger-UI'],
+    link: 'https://github.com/Ebetosin/middleware-java-api'
   },
   {
-    name: 'Fixed Asset Management System',
-    desc: 'End-to-end asset lifecycle management covering acquisition, depreciation, reassignment, disposal, and audit logging.',
-    stack: 'Spring Boot • React • Docker • PostgreSQL',
-    link: '#'
+    name: 'Guest Management System',
+    desc: 'A guest management system for signing in and out guests to keep track of their visits within an organization.',
+    tags: ['Java', 'Spring Boot', 'PostgreSQL'],
+    link: 'https://github.com/Ebetosin/Guest-java-app'
   },
   {
-    name: 'BVN / NIN Verification Platform',
-    desc: 'Secure biometric verification system integrating fingerprint capture, external identity validation, and verification reporting.',
-    stack: 'Java • Spring Boot • Biometrics • React',
-    link: '#'
+    name: 'Student Management System',
+    desc: 'A containerized student management system for adding and fetching student information with deployment-ready architecture.',
+    tags: ['Java', 'Spring Boot', 'Docker', 'PostgreSQL'],
+    link: 'https://github.com/Ebetosin/student-app'
   },
   {
-    name: 'Referral Management System',
-    desc: 'Enterprise referral workflow with multi-level approvals, audit trails, role-based access, and real-time status tracking.',
-    stack: 'Java • Spring Boot • React • PostgreSQL',
-    link: '#'
+    name: 'Spring Security Role-Based App',
+    desc: 'A role-based application demonstrating authentication and authorization using Spring Security with different user roles.',
+    tags: ['Spring Boot', 'React', 'PostgreSQL'],
+    link: 'https://github.com/Ebetosin/Spring-Security-and-role-based-app'
   },
   {
-    name: 'Fixed Asset Management System',
-    desc: 'End-to-end asset lifecycle management covering acquisition, depreciation, reassignment, disposal, and audit logging.',
-    stack: 'Spring Boot • React • Docker • PostgreSQL',
-    link: '#'
+    name: 'Employee Posting Portal',
+    desc: 'An employee posting frontend for managing department assignments and updating user information efficiently.',
+    tags: ['JavaScript', 'React', 'CSS'],
+    link: 'https://github.com/Ebetosin/Employee-posting-portal-frontend'
   },
   {
-    name: 'BVN / NIN Verification Platform',
-    desc: 'Secure biometric verification system integrating fingerprint capture, external identity validation, and verification reporting.',
-    stack: 'Java • Spring Boot • Biometrics • React',
-    link: '#'
+    name: 'Mini Real Estate Floor Selector',
+    desc: 'A real estate floor selection application with intuitive UI for building navigation and payment integration.',
+    tags: ['JavaScript', 'React', 'CSS'],
+    link: 'https://github.com/Ebetosin/Mini-Real-Estate-Floor-Selector'
   }
 ]
 
@@ -59,7 +59,11 @@ const Projects = () => {
               <h3>{project.name}</h3>
               <p>{project.desc}</p>
               <div className="project-footer">
-                <span className="stack">{project.stack}</span>
+                <div className="tags">
+                  {project.tags.map(tag => (
+                    <span key={tag} className="tag">{tag}</span>
+                  ))}
+                </div>
                 <span className="cta">View →</span>
               </div>
             </a>
