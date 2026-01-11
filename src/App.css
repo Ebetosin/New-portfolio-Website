@@ -776,6 +776,18 @@ footer {
   }
 }
 
+/* Light mode */
+:root {
+  --tag-bg: rgba(100, 116, 139, 0.12);
+  --tag-text: #475569;
+}
+
+/* Dark mode */
+html.dark {
+  --tag-bg: rgba(148, 163, 184, 0.18);
+  --tag-text: #e2e8f0;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -784,12 +796,14 @@ footer {
 
 .tag {
   font-size: 0.8rem;
-  background: rgba(100, 116, 139, 0.1);
-  color: #475569;
+  background: var(--tag-bg);
+  color: var(--tag-text);
   padding: 0.4rem 0.8rem;
-  border-radius: 4px;
+  border-radius: 6px;
   font-weight: 500;
+  border: 1px solid rgba(148, 163, 184, 0.15);
 }
+
 
 .project-footer {
   display: flex;
