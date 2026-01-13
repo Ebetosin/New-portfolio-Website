@@ -20,7 +20,7 @@ const PROJECTS = [
   {
     name: 'Spring Security Role-Based App',
     desc: 'A role-based application demonstrating authentication and authorization using Spring Security with different user roles.',
-    tags: ['Spring Boot', 'React', 'PostgreSQL'],
+    tags: ['Java', 'Spring Boot', 'PostgreSQL'],
     link: 'https://github.com/Ebetosin/Spring-Security-and-role-based-app'
   },
   {
