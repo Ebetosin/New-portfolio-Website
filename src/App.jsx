@@ -1,29 +1,47 @@
-import React from 'react'
-import './App.css'
+import React, { useEffect, useState } from 'react'
+import Snowfall from 'react-snowfall'
+
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import About from './components/About'
 import Skills from './components/Skills'
+import Experience from './components/Experience'
+import Certifications from './components/Certifications'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
-import Experience from './components/Experience'
-// import Snowfall from 'react-snowfall'
 
-// import DebugOverflows from './components/DebugOverflows'
+import './App.css'
 
 function App() {
+  const [snowColor, setSnowColor] = useState('#ffffff')
+
+  useEffect(() => {
+    const updateSnowColor = () => {
+      const isDark = document.documentElement.classList.contains('dark')
+      setSnowColor(isDark ? '#ffffff' : '#94a3b8')
+    }
+
+    updateSnowColor()
+
+    // optional: react to theme toggle dynamically
+    const observer = new MutationObserver(updateSnowColor)
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <div className="app-root">
-      {/* <Snowfall
-  color="white"
-  style={{
-    position: 'fixed',
-    width: '100vw',
-    height: '100vh',
-    zIndex: 9999,
-    pointerEvents: 'none'
-  }}
-/> */}
+      {/* ===== GLOBAL SNOW LAYER ===== */}
+      <div className="snow-layer">
+        <Snowfall
+          color={snowColor}
+          snowflakeCount={120}
+        />
+      </div>
 
       <Navbar />
 
@@ -32,18 +50,16 @@ function App() {
         <About />
         <Skills />
         <Experience />
+        <Certifications />
         <Projects />
         <Contact />
       </main>
 
       <footer className="site-footer">
-        © {new Date().getFullYear()} . All Right Reserved by E_benn
+        © {new Date().getFullYear()} · All Rights Reserved · E_benn
       </footer>
-      {/* dev-only overflow debugger: append ?debug=overflow to URL to enable */}
-      {/* {typeof window !== 'undefined' && window.location.search.includes('debug=overflow') ? <DebugOverflows /> : null} */}
-    </div> 
+    </div>
   )
 }
-
 
 export default App

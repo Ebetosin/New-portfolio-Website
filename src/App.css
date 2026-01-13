@@ -67,6 +67,8 @@ body {
 main {
   flex: 1;
   padding-top: 6.5rem;
+  position: relative;
+  z-index: 10;
 }
 
 .container {
@@ -82,6 +84,20 @@ section {
 .alt {
   background: var(--bg-alt);
   transition: background 0.3s ease;
+}
+
+/* =====================================================
+   SNOW LAYER
+===================================================== */
+.snow-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
 }
 
 /* =====================================================
@@ -351,8 +367,8 @@ html.dark .site-header.scrolled {
 ===================================================== */
 
 .card,
-.skill-card,
-.experience {
+.skill-card
+ {
   background: var(--bg-card);
   box-shadow: 0 10px 30px var(--card-shadow);
   border-radius: 12px;
@@ -427,7 +443,7 @@ html.dark .site-header.scrolled {
 ========================= */
 #projects {
   padding: 5rem 0;
-  background: var(--bg-main); /* Match contact section color */
+  background: var(--bg-alt);
   transition: background 0.3s ease;
 }
 
@@ -498,6 +514,7 @@ html.dark .site-header.scrolled {
 /* =========================
    EXPERIENCE SECTION
 ========================= */
+
 .experience-card {
   background: var(--bg-card);
   color: var(--text-main); /* Ensure visibility in light mode */
@@ -566,6 +583,69 @@ html.dark .site-header.scrolled {
 }
 
 /* =====================================================
+   CERTIFICATIONS SECTION
+===================================================== */
+
+.certifications-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.certification-card {
+  background: var(--bg-card);
+  color: var(--text-main);
+  padding: 1.5rem;
+  border-radius: 14px;
+  border-left: 4px solid var(--accent);
+  min-width: 280px;
+  max-width: 320px;
+  box-shadow: 0 10px 30px var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.certification-card:hover,
+.certification-card:active {
+  transform: translateY(-4px);
+  box-shadow:
+    0 14px 40px var(--card-shadow),
+    0 0 0 1px rgba(37, 99, 235, 0.15),
+    0 10px 30px rgba(37, 99, 235, 0.35);
+}
+
+.cert-icon {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.certification-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.certification-card .issuer {
+  font-weight: 600;
+  opacity: 0.9;
+  margin-bottom: 0.25rem;
+  color: var(--text-muted);
+}
+
+.certification-card .date {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  color: var(--text-muted);
+}
+
+/* =====================================================
    ABOUT SECTION
 ===================================================== */
 #about {
@@ -579,6 +659,7 @@ html.dark .site-header.scrolled {
 #projects h2,
 #frontend h2,
 #experience h2,
+#certifications h2,
 #backend h2 {
   text-align: center;
   font-size: 2rem;
@@ -592,6 +673,7 @@ html.dark .site-header.scrolled {
 #projects .muted,
 #frontend .muted,
 #experience .muted,
+#certifications .muted,
 #backend .muted {
   text-align: center;
   font-size: 1.1rem;
@@ -640,7 +722,7 @@ html.dark .site-header.scrolled {
 ===================================================== */
 .contact-section {
   padding: 5rem 0;
-  background: var(--bg-alt); /* Lighter background */
+  background: var(--bg-main); /* Main background */
   transition: background 0.3s ease;
 }
 
@@ -749,7 +831,7 @@ footer {
   text-align: center;
   font-size: 0.9rem;
 
-  background: var(--bg-main);          /* SAME as contact */
+  background: var(--bg-alt);          /* Same as projects */
   backdrop-filter: blur(8px);         /* glass continuity */
   border-top: 1px solid var(--border-soft);
 

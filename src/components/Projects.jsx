@@ -39,7 +39,7 @@ const PROJECTS = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="alt">
+    <section id="projects">
       <div className="container">
         <h2>Projects</h2>
         <p className="muted">
