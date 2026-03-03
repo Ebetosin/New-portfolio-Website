@@ -9,7 +9,7 @@ const Home = () => {
         <div>
           <p className="eyebrow">Backend Engineer • Full-Stack Delivery</p>
           <h1 className="home-greeting">
-            Building secure backend systems and user-focused web products.
+            Building secure backend systems and user-focused applications.
           </h1>
 
           <p className="lead">
@@ -19,7 +19,7 @@ const Home = () => {
 
           <div className="highlights" aria-label="Key profile highlights">
             <span>4+ years in web development</span>
-            <span>6 production-grade projects</span>
+            <span>Worked on production-grade projects</span>
             <span>Java, Spring Boot, React</span>
           </div>
 
