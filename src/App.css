@@ -129,7 +129,7 @@ h2 {
   transform: translateX(-50%);
   z-index: 40;
   width: min(1120px, calc(100% - 2rem));
-  background: color-mix(in oklab, var(--surface), transparent 10%);
+  background: color-mix(in oklab, var(--bg-soft), var(--surface) 22%);
   border: 1px solid var(--border);
   border-radius: 999px;
   box-shadow: var(--shadow-sm);
@@ -575,7 +575,12 @@ h2 {
 .site-footer {
   margin-top: auto;
   border-top: 1px solid var(--border);
-  background: color-mix(in oklab, var(--surface), var(--bg) 20%);
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--surface), var(--bg) 36%),
+      color-mix(in oklab, var(--surface), var(--bg) 44%)
+    );
 }
 
 .site-footer p {
