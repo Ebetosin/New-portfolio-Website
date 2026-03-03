@@ -8,6 +8,7 @@ import {
   FaReact,
 } from 'react-icons/fa'
 import {
+  SiFlutter,
   SiNextdotjs,
   SiSpringboot,
   SiStyledcomponents,
@@ -29,6 +30,7 @@ const FRONTEND = [
   { name: 'CSS', icon: <FaCss3Alt /> },
   { name: 'Tailwind CSS', icon: <SiTailwindcss /> },
   { name: 'Styled Components', icon: <SiStyledcomponents /> },
+  { name: 'Flutter', icon: <SiFlutter /> },
 ]
 
 const Skills = () => {
