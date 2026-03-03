@@ -46,9 +46,11 @@ body {
   font-family: 'Manrope', 'Segoe UI', sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at 0% 0%, var(--bg-soft), transparent 38%),
-    radial-gradient(circle at 100% 10%, rgba(147, 197, 253, 0.12), transparent 30%),
-    var(--bg);
+    linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--bg-soft), var(--surface) 30%),
+      color-mix(in oklab, var(--bg), var(--surface) 12%)
+    );
   line-height: 1.6;
 }
 
