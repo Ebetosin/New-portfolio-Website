@@ -45,7 +45,7 @@ const PROJECTS = [
 
 const Projects = () => {
   return (
-    <section id="projects">
+    <section id="projects" className="alt">
       <div className="container">
         <h2>Featured Projects</h2>
         <p className="muted">
