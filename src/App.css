@@ -134,7 +134,6 @@ h2 {
   background: color-mix(in oklab, var(--bg-soft), var(--surface) 38%);
   border: 1px solid color-mix(in oklab, var(--border), var(--accent) 8%);
   border-radius: 999px;
-  padding: 0.22rem;
   box-shadow: var(--shadow-sm);
   backdrop-filter: blur(10px);
 }
@@ -149,9 +148,6 @@ h2 {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 999px;
   padding: 0.65rem 1.2rem;
 }
 
