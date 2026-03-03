@@ -52,6 +52,17 @@ body {
   line-height: 1.6;
 }
 
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 a {
   color: inherit;
 }
@@ -237,6 +248,7 @@ h2 {
   grid-template-columns: 220px 1fr;
   gap: 2.5rem;
   align-items: center;
+  animation: fade-up 520ms ease both;
 }
 
 .avatar {
@@ -358,6 +370,7 @@ h2 {
   border: 1px solid var(--border);
   border-radius: 14px;
   box-shadow: var(--shadow-sm);
+  animation: fade-up 520ms ease both;
 }
 
 .card,
@@ -504,6 +517,12 @@ h2 {
   justify-content: center;
 }
 
+.contact-section {
+  min-height: 56vh;
+  display: flex;
+  align-items: center;
+}
+
 .contact-icons {
   margin-top: 2rem;
   display: grid;
@@ -524,6 +543,7 @@ h2 {
   font-size: 1rem;
   font-weight: 600;
   color: var(--text);
+  animation: fade-up 520ms ease both;
 }
 
 .contact-icon svg {
@@ -551,6 +571,30 @@ h2 {
 .contact-icon:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
+}
+
+.cards > *:nth-child(2),
+.skills-grid > *:nth-child(2),
+.experience-grid > *:nth-child(2),
+.certifications-grid > *:nth-child(2),
+.projects-grid > *:nth-child(2),
+.contact-icons > *:nth-child(2) {
+  animation-delay: 70ms;
+}
+
+.cards > *:nth-child(3),
+.experience-grid > *:nth-child(3),
+.certifications-grid > *:nth-child(3),
+.projects-grid > *:nth-child(3),
+.contact-icons > *:nth-child(3) {
+  animation-delay: 120ms;
+}
+
+.experience-grid > *:nth-child(4),
+.certifications-grid > *:nth-child(4),
+.projects-grid > *:nth-child(4),
+.contact-icons > *:nth-child(4) {
+  animation-delay: 170ms;
 }
 
 a:focus-visible,
@@ -635,6 +679,10 @@ button:focus-visible {
 
   .contact-icons {
     grid-template-columns: 1fr;
+  }
+
+  .contact-section {
+    min-height: auto;
   }
 }
 

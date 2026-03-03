@@ -18,7 +18,7 @@ const Home = () => {
           </p>
 
           <div className="highlights" aria-label="Key profile highlights">
-            <span>5+ years in web development</span>
+            <span>4+ years in web development</span>
             <span>6 production-grade projects</span>
             <span>Java, Spring Boot, React</span>
           </div>

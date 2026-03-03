@@ -12,13 +12,21 @@ const Navbar = () => {
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 20)
-      const scrollPos = window.scrollY + 140
+      const scrollPos = window.scrollY + 180
+      const nearBottom =
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4
 
-      for (const id of sections) {
+      if (nearBottom) {
+        setActive('contact')
+        return
+      }
+
+      for (let i = sections.length - 1; i >= 0; i -= 1) {
+        const id = sections[i]
         const el = document.getElementById(id)
-        if (el && el.offsetTop <= scrollPos && el.offsetTop + el.offsetHeight > scrollPos) {
+        if (el && scrollPos >= el.offsetTop) {
           setActive(id)
-          break
+          return
         }
       }
     }
@@ -33,7 +41,7 @@ const Navbar = () => {
     <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <a href="#home" className="brand-link" aria-label="Go to home section">
-          <span className="brand">Eben<span className="brand-accent">.dev</span></span>
+          <span className="brand">E_benn<span className="brand-accent">.dev</span></span>
         </a>
 
         <div className="nav-center">
