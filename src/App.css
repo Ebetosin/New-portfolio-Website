@@ -131,7 +131,7 @@ h2 {
   transform: translateX(-50%);
   z-index: 40;
   width: min(1120px, calc(100% - 2rem));
-  background: color-mix(in oklab, var(--bg-soft), var(--surface) 38%);
+  background: var(--surface);
   border: 1px solid color-mix(in oklab, var(--border), var(--accent) 8%);
   border-radius: 999px;
   box-shadow: var(--shadow-sm);
