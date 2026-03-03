@@ -76,6 +76,15 @@ section {
   padding: 5rem 0;
 }
 
+section:not(.alt) {
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--bg-soft), var(--surface) 30%),
+      color-mix(in oklab, var(--bg), var(--surface) 12%)
+    );
+}
+
 .container {
   width: min(1120px, calc(100% - 2rem));
   margin: 0 auto;
@@ -514,14 +523,7 @@ h2 {
 }
 
 #projects {
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in oklab, var(--surface), var(--bg) 14%),
-      color-mix(in oklab, var(--surface), var(--bg) 30%)
-    );
   border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
 }
 
 #projects h2,
@@ -530,20 +532,6 @@ h2 {
   display: inline-block;
   left: 50%;
   transform: translateX(-50%);
-  padding-bottom: 0.35rem;
-}
-
-#projects h2::after,
-.contact-section h2::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 56px;
-  height: 2px;
-  transform: translateX(-50%);
-  background: color-mix(in oklab, var(--accent), transparent 18%);
-  border-radius: 999px;
 }
 
 .contact-cta {
@@ -551,12 +539,6 @@ h2 {
 }
 
 .contact-section {
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in oklab, var(--surface), var(--bg) 8%),
-      color-mix(in oklab, var(--surface), var(--bg) 20%)
-    );
   border-top: 1px solid var(--border);
   min-height: 56vh;
   display: flex;
@@ -593,7 +575,7 @@ h2 {
 .site-footer {
   margin-top: auto;
   border-top: 1px solid var(--border);
-  background: color-mix(in oklab, var(--surface), transparent 12%);
+  background: color-mix(in oklab, var(--surface), var(--bg) 8%);
 }
 
 .site-footer p {
