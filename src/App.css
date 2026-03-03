@@ -513,11 +513,51 @@ h2 {
   font-size: 0.85rem;
 }
 
+#projects {
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--surface), var(--bg) 14%),
+      color-mix(in oklab, var(--surface), var(--bg) 30%)
+    );
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+#projects h2,
+.contact-section h2 {
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 0.35rem;
+}
+
+#projects h2::after,
+.contact-section h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 56px;
+  height: 2px;
+  transform: translateX(-50%);
+  background: color-mix(in oklab, var(--accent), transparent 18%);
+  border-radius: 999px;
+}
+
 .contact-cta {
   justify-content: center;
 }
 
 .contact-section {
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--surface), var(--bg) 8%),
+      color-mix(in oklab, var(--surface), var(--bg) 20%)
+    );
+  border-top: 1px solid var(--border);
   min-height: 56vh;
   display: flex;
   align-items: center;

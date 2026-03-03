@@ -26,7 +26,7 @@ function App() {
 
       <footer className="site-footer">
         <p>
-          © {new Date().getFullYear()} Ebenezer Ojo. Built with React and Vite.
+          © {new Date().getFullYear()} Ebenezer Ojo. All rights reserved.
         </p>
       </footer>
     </div>
