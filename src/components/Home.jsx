@@ -1,4 +1,4 @@
-import picture from '../assets/IMG_3019.jpg'
+import picture from '../assets/main_eben.jpg'
 
 const Home = () => {
   return (
