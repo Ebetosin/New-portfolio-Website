@@ -252,6 +252,8 @@ h2 {
   border-radius: 18px;
   border: 1px solid var(--border);
   object-fit: cover;
+  object-position: center;
+  transform: scale(1.06);
   box-shadow: var(--shadow-md);
 }
 
