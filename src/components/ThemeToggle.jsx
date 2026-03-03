@@ -1,38 +1,48 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const ThemeToggle = () => {
   const [theme, setTheme] = useState(() => {
     try {
-      return localStorage.getItem('theme') || 
-        (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-    } catch (e) {
-      return 'light'
+      const storedTheme = localStorage.getItem('theme')
+      if (storedTheme) {
+        return storedTheme
+      }
+
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark'
+      }
+    } catch {
+      // Fall back to light mode when localStorage is unavailable.
     }
+
+    return 'light'
   })
 
   useEffect(() => {
     const root = document.documentElement
+
     if (theme === 'dark') {
       root.classList.add('dark')
     } else {
       root.classList.remove('dark')
     }
-    console.debug('[ThemeToggle] applied theme:', theme)
-    try { localStorage.setItem('theme', theme) } catch (e) {}
-  }, [theme])
 
-  function toggle() {
-    setTheme((t) => t === 'dark' ? 'light' : 'dark')
-  }
+    try {
+      localStorage.setItem('theme', theme)
+    } catch {
+      // Ignore storage failures.
+    }
+  }, [theme])
 
   return (
     <button
+      type="button"
       aria-label="Toggle color theme"
       title="Toggle color theme"
-      onClick={toggle}
+      onClick={() => setTheme((current) => (current === 'dark' ? 'light' : 'dark'))}
       className="btn ghost theme-toggle"
     >
-      {theme === 'dark' ? '☀️' : '🌙'}
+      {theme === 'dark' ? 'Light' : 'Dark'}
     </button>
   )
 }

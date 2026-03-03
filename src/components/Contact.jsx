@@ -1,22 +1,30 @@
-import React from 'react'
 import { MdEmail } from 'react-icons/md'
-import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaXTwitter } from 'react-icons/fa6'
+
+const contacts = [
+  { icon: <MdEmail />, href: 'mailto:ebetosin@gmail.com', label: 'Email' },
+  { icon: <FaGithub />, href: 'https://github.com/Ebetosin', label: 'GitHub' },
+  { icon: <FaXTwitter />, href: 'https://x.com/ebetosin', label: 'X' },
+  {
+    icon: <FaLinkedin />,
+    href: 'https://www.linkedin.com/in/ebenezer-ojo-ba11ab222',
+    label: 'LinkedIn',
+  },
+]
 
 const Contact = () => {
-  const contacts = [
-    { icon: <MdEmail />, href: 'mailto:ebetosin@gmail.com', label: 'Email' },
-    { icon: <FaGithub />, href: 'https://github.com/Ebetosin', label: 'GitHub' },
-    { icon: <FaTwitter />, href: 'https://x.com/ebetosin?s=21', label: 'Twitter' },
-    { icon: <FaLinkedin />, href: 'http://www.linkedin.com/in/ebenezer-ojo-ba11ab222', label: 'LinkedIn' },
-  ]
-
   return (
     <section id="contact" className="contact-section">
       <div className="container">
-        <h2>Contact</h2>
+        <h2>Let&apos;s Work Together</h2>
         <p className="muted">
-          Reach me via email or connect on GitHub, Twitter, and LinkedIn.
+          Available for backend, full-stack, and platform engineering roles.
         </p>
+
+        <div className="actions contact-cta">
+          <a href="mailto:ebetosin@gmail.com" className="btn primary">Discuss an Opportunity</a>
+          <a href="/cv/Ebenezer_CV.pdf" className="btn ghost" download>Download Resume</a>
+        </div>
 
         <div className="contact-icons">
           {contacts.map((c) => (
@@ -30,6 +38,7 @@ const Contact = () => {
               title={c.label}
             >
               {c.icon}
+              <span>{c.label}</span>
             </a>
           ))}
         </div>

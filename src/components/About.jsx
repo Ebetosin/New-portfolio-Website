@@ -1,68 +1,40 @@
 const About = () => {
   return (
-    // <section id="about">
-    //   <div className="container">
-    //     <h2>About Me</h2>
-
-    //     <p className="muted">
-    //       I design backend systems and craft frontends with a strong focus on
-    //       clarity, reliability, and scalability.
-    //     </p>
-
-    //     <div className="cards">
-    //       <div className="card">
-    //         <h3>Java Backend Engineer</h3>
-    //         <p>
-    //           Spring Boot microservices, REST APIs, transactional systems,
-    //           observability, Docker, CI/CD pipelines.
-    //         </p>
-    //       </div>
-
-    //       <div className="card">
-    //         <h3>React Frontend Developer</h3>
-    //         <p>
-    //           Component-driven SPAs, accessibility-first design, performance
-    //           optimization, maintainable architecture.
-    //         </p>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </section>
     <section id="about" className="alt">
-  <div className="container">
-    <h2>About Me</h2>
-    <p className="muted">
-      Software engineer focused on scalable systems, clean architecture,
-      and great user experience.
-    </p>
-
-    <div className="cards">
-      <div className="card">
-        <h3>Backend Engineering</h3>
-        <p>
-          Designing secure, scalable APIs using Java, Spring Boot,
-          PostgreSQL, JWT, and Docker.
+      <div className="container">
+        <h2>About</h2>
+        <p className="muted">
+          I build production software end-to-end, from API design and data modeling to intuitive,
+          accessible user interfaces.
         </p>
-      </div>
 
-      <div className="card">
-        <h3>Frontend Engineering</h3>
-        <p>
-          Building responsive, accessible UIs with React, modern CSS,
-          and clean component architecture.
-        </p>
-      </div>
+        <div className="cards">
+          <article className="card">
+            <h3>Backend Engineering</h3>
+            <p>
+              Java and Spring Boot services with clean layering, secure authentication,
+              observability, and reliable deployment workflows.
+            </p>
+          </article>
 
-      <div className="card">
-        <h3>Professional Focus</h3>
-        <p>
-          Performance, maintainability, security, and developer-friendly systems.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+          <article className="card">
+            <h3>Frontend Engineering</h3>
+            <p>
+              React applications focused on usability, accessibility, and maintainable component
+              architecture for long-term iteration.
+            </p>
+          </article>
 
+          <article className="card">
+            <h3>Execution Style</h3>
+            <p>
+              I prioritize clear requirements, measurable outcomes, and stable delivery quality
+              across the software lifecycle.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
   )
 }
 

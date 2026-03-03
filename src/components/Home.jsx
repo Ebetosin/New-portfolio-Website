@@ -1,57 +1,32 @@
-import React, { useEffect, useState } from 'react'
 import picture from '../assets/eben.JPG'
-import Snowfall from 'react-snowfall'
 
 const Home = () => {
-  const [bounce, setBounce] = useState(false)
-  const [snowColor, setSnowColor] = useState('#ffffff')
-
-  useEffect(() => {
-    const isDark = document.documentElement.classList.contains('dark')
-    setSnowColor(isDark ? '#ffffff' : '#94a3b8') // white on dark, gray on light
-  }, [])
-
-  const handleClick = () => {
-    setBounce(true)
-    setTimeout(() => setBounce(false), 600)
-  }
-
   return (
     <section id="home" className="home">
-      <Snowfall
-        color={snowColor}
-        snowflakeCount={120}
-        style={{
-          position: 'absolute',
-          inset: 0,
-          zIndex: 1,
-          pointerEvents: 'none'
-        }}
-      />
-
       <div className="container home-grid">
-        <img src={picture} alt="Ebenezer Ojo avatar" className="avatar" />
+        <img src={picture} alt="Portrait of Ebenezer Ojo" className="avatar" />
 
         <div>
+          <p className="eyebrow">Backend Engineer • Full-Stack Delivery</p>
           <h1 className="home-greeting">
-            Hi, I'm{' '}
-            <span
-              className={`brand-accent home-name ${bounce ? 'bounce' : ''}`}
-              onClick={handleClick}
-            >
-              Ebenezer Ojo
-            </span>
-            👋
+            Building secure backend systems and user-focused web products.
           </h1>
 
           <p className="lead">
-            I build reliable backend systems using Java and Spring Boot, and craft
-            polished, accessible user interfaces with React.
+            I design and ship Java/Spring services and React applications that are maintainable,
+            reliable, and ready for production environments.
           </p>
 
+          <div className="highlights" aria-label="Key profile highlights">
+            <span>5+ years in web development</span>
+            <span>6 production-grade projects</span>
+            <span>Java, Spring Boot, React</span>
+          </div>
+
           <div className="actions">
-            <a href="#projects" className="btn primary">View Work</a>
-            <a href="#contact" className="btn ghost">Connect with Me</a>
+            <a href="#projects" className="btn primary">View Featured Work</a>
+            <a href="/cv/Ebenezer_CV.pdf" className="btn ghost" download>Download Resume</a>
+            <a href="mailto:ebetosin@gmail.com" className="btn ghost">Email Me</a>
           </div>
         </div>
       </div>
