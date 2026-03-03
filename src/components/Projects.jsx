@@ -47,7 +47,7 @@ const Projects = () => {
   return (
     <section id="projects" className="alt">
       <div className="container">
-        <h2>Featured Projects</h2>
+        <h2>GitHub Projects</h2>
         <p className="muted">
           Most recruiter-relevant work first, focused on backend architecture, security, and
           production delivery.

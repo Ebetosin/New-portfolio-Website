@@ -24,7 +24,7 @@ const Home = () => {
           </div>
 
           <div className="actions">
-            <a href="#projects" className="btn primary">View Featured Work</a>
+            <a href="#projects" className="btn primary">View GitHub Projects</a>
             <a href="/cv/Ebenezer_CV.pdf" className="btn ghost" download>Download Resume</a>
             <a href="mailto:ebetosin@gmail.com" className="btn ghost">Email Me</a>
           </div>
