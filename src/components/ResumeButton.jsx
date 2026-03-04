@@ -21,7 +21,7 @@ import { FiDownload } from 'react-icons/fi'
 const ResumeButton = () => {
   return (
     <a
-      href="/cv/Ebenezer_CV.pdf?v=20260304"
+      href="/cv/EBENEZER-OJO-CV....pdf"
       download
       className="btn primary download-btn"
     >
