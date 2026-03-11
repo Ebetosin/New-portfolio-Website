@@ -2,6 +2,12 @@ import { FaCertificate } from 'react-icons/fa'
 
 const CERTIFICATIONS = [
   {
+    name: 'Secure Coding Training',
+    issuer: 'SmartComply Academy',
+    date: 'March 11, 2026',
+    credentialId: 'S C 5 6 1 5 5 2 6',
+  },
+  {
     name: 'Enterprise Thinking for Information Technology Professionals',
     issuer: 'Udemy',
     date: '2025',
