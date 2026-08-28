@@ -12,7 +12,7 @@ const Home = () => {
       <div className="container home-grid">
         <div className="portrait-shell">
           <div className="portrait-glow" aria-hidden="true" />
-          <img src={picture} alt="Ebenezer Ojo, backend and full-stack engineer" className="avatar" width="1000" height="864" fetchPriority="high" />
+          <img src={picture} alt="Ebenezer Ojo, software engineer" className="avatar" width="1000" height="864" fetchPriority="high" />
           <div className="availability-card">
             <span className="status-dot" aria-hidden="true" />
             Open to UK &amp; global opportunities
@@ -20,7 +20,7 @@ const Home = () => {
         </div>
 
         <div className="hero-copy">
-          <p className="eyebrow"><span>Backend Engineer</span> • Full-Stack Delivery</p>
+          <p className="eyebrow"><span>Software Engineer</span> • Full-Stack Delivery</p>
           <h1 className="home-greeting">
             I engineer reliable systems that <span className="gradient-text">scale with the business.</span>
           </h1>
