@@ -18,7 +18,7 @@ const Contact = () => {
       <div className="container">
         <h2>Let&apos;s Work Together</h2>
         <p className="muted">
-          Available for backend, full-stack, and platform engineering roles.
+          Open to UK and international backend, full-stack, and platform engineering opportunities.
         </p>
 
         <div className="actions contact-cta">

@@ -55,17 +55,20 @@ const Experience = () => {
   return (
     <section id="experience" className="alt">
       <div className="container">
-        <h2>Experience</h2>
+        <p className="section-kicker">Professional journey</p>
+        <h2>Experience delivering real systems</h2>
         <p className="muted">
           Roles where I delivered software outcomes across backend systems and customer-facing web
           applications.
         </p>
 
-        <div className="experience-grid">
-          {EXPERIENCE.map((exp) => (
+        <div className="experience-grid aceternity-timeline">
+          {EXPERIENCE.map((exp, index) => (
             <article key={`${exp.role}-${exp.company}`} className="experience-card">
+              <span className="timeline-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
               <h3>{exp.role}</h3>
               <p className="company">{exp.company}</p>
+              {exp.company === 'Freelance' && <span className="role-type">Independent / contract delivery</span>}
               <p className="period">{exp.period}</p>
               <p className="desc">{exp.desc}</p>
               <ul className="impact-list">

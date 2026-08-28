@@ -14,7 +14,7 @@ const CERTIFICATIONS = [
     credentialId: 'UC-08476d98-c4d8-4d60-b85c-a1f50f97b6ca',
   },
   {
-    name: 'AWS Certified Cloud Practitioner',
+    name: 'AWS Cloud Practitioner Preparation Course',
     issuer: 'Udemy',
     date: '2024',
     credentialId: 'UC-08440e1a-44ee-4112-98bd-29430bb5f53e',
@@ -49,7 +49,8 @@ const Certifications = () => {
   return (
     <section id="certifications">
       <div className="container">
-        <h2>Certifications</h2>
+        <p className="section-kicker">Continuous development</p>
+        <h2>Training &amp; certifications</h2>
         <p className="muted">
           Continuous learning in cloud, backend architecture, and software engineering delivery.
         </p>

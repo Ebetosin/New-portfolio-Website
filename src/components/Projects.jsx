@@ -47,7 +47,8 @@ const Projects = () => {
   return (
     <section id="projects" className="alt">
       <div className="container">
-        <h2>GitHub Projects</h2>
+        <p className="section-kicker">Selected engineering work</p>
+        <h2>Systems, security and delivery</h2>
         <p className="muted">
           Most recruiter-relevant work first, focused on backend architecture, security, and
           production delivery.
@@ -55,17 +56,18 @@ const Projects = () => {
 
         <div className="projects-grid">
           {PROJECTS.map((project) => (
-            <a
+            <CardSpotlight
               key={project.name}
               href={project.link}
-              className="project-card"
+              as="a"
+              className="project-card project-3d-card"
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Open project: ${project.name}`}
             >
               <h3>{project.name}</h3>
               <p className="desc">{project.desc}</p>
-              <p className="project-impact"><strong>Outcome:</strong> {project.impact}</p>
+              <p className="project-impact"><strong>Engineering focus:</strong> {project.impact}</p>
               <div className="project-footer">
                 <div className="tags">
                   {project.tags.map((tag) => (
@@ -74,7 +76,7 @@ const Projects = () => {
                 </div>
                 <span className="cta">Open Repo</span>
               </div>
-            </a>
+            </CardSpotlight>
           ))}
         </div>
       </div>
@@ -83,3 +85,4 @@ const Projects = () => {
 }
 
 export default Projects
+import { CardSpotlight } from './ui/Aceternity'

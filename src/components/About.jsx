@@ -2,36 +2,37 @@ const About = () => {
   return (
     <section id="about" className="alt">
       <div className="container">
-        <h2>About</h2>
+        <p className="section-kicker">How I contribute</p>
+        <h2>Engineering beyond the feature</h2>
         <p className="muted">
           I build production software end-to-end, from API design and data modeling to intuitive,
           accessible user interfaces.
         </p>
 
         <div className="cards">
-          <article className="card">
+          <CardSpotlight className="card bento-card bento-large">
             <h3>Backend Engineering</h3>
             <p>
-              Java and Spring Boot services with clean layering, secure authentication,
-              observability, and reliable deployment workflows.
+              Java and Spring Boot services with clean layering, defensive API design, secure
+              authentication, auditability, and integration boundaries built for change.
             </p>
-          </article>
+          </CardSpotlight>
 
-          <article className="card">
+          <CardSpotlight className="card bento-card">
             <h3>Frontend Engineering</h3>
             <p>
-              React applications focused on usability, accessibility, and maintainable component
-              architecture for long-term iteration.
+              React applications focused on usability, WCAG-aware interaction, responsive
+              behaviour, and maintainable component architecture.
             </p>
-          </article>
+          </CardSpotlight>
 
-          <article className="card">
+          <CardSpotlight className="card bento-card">
             <h3>Execution Style</h3>
             <p>
-              I prioritize clear requirements, measurable outcomes, and stable delivery quality
-              across the software lifecycle.
+              I work from clear requirements through implementation, review, testing and release,
+              communicating trade-offs and keeping delivery quality visible.
             </p>
-          </article>
+          </CardSpotlight>
         </div>
       </div>
     </section>
@@ -39,3 +40,4 @@ const About = () => {
 }
 
 export default About
+import { CardSpotlight } from './ui/Aceternity'
